@@ -1,0 +1,24 @@
+/* Estilo personalizado para la fuente Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Nota: Los estilos base de Tailwind (como bg-stone-50, text-stone-800)
+       se aplican directamente en el HTML usando clases de Tailwind.
+       Este archivo es para estilos personalizados adicionales o overrides. */
+}
+
+/* Efecto sutil en hover para tarjetas de servicio */
+.service-card:hover {
+    transform: translateY(-5px); /* Mueve la tarjeta 5px hacia arriba */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra más pronunciada */
+    /* transition y ease-in-out se aplican con clases de Tailwind en el HTML */
+}
+
+/* Estilo para el contenedor del logo Lottie */
+#lottie-logo {
+    width: auto; /* Permite que el ancho se ajuste al contenido */
+    height: 50px; /* Altura fija para el logo, ajústala según sea necesario */
+    /* Puedes añadir más estilos aquí si es necesario */
+}
+
+/* Puedes añadir más reglas CSS personalizadas aquí */
+
