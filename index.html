@@ -14,7 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
     <style>
         /* Ensure the video covers the entire hero section */
         #hero-video {
@@ -47,7 +48,10 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
+    
 </head>
+
+
 <body class="bg-[#ffa8c2] text-[#1f2937]">
 
   <header class="bg-[#ffa8c2] text-[#ffffff] shadow-md">
@@ -79,7 +83,7 @@
 
     <section id="servicios" class="py-16 md:py-24 bg-[#ffffff]">
         <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Rituales de Bienestar Exclusivos</h3>
+            <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Servicios</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <a href="faciales.html" class="service-link group block rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a855f7] focus:ring-offset-2">
@@ -142,66 +146,80 @@
         </div>
     </section>
 
-    <section id="productos" class="py-16 md:py-24 bg-[#ffffff]"> <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Nuestra Boutique Exclusiva</h3>
-            <p class="text-center text-[#4b5563] mb-10 max-w-2xl mx-auto">Lleva la experiencia OEVA Spa a casa con nuestra selección de productos cuidadosamente elegidos para tu bienestar.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section id="boutique" class="py-16 md:py-24 bg-[#f5f3ff] overflow-hidden">
+    <div class="container mx-auto">
+        <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Boutique</h3>
 
-                <div class="product-card bg-[#f9fafb] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden flex flex-col group">
-                    <div class="relative rounded-md overflow-hidden mb-4">
-                        <img src="https://placehold.co/400x250/f3e8ff/8b5cf6?text=Crema+Hidratante+Lavanda" alt="[Imagen de Crema Hidratante de Lavanda]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/f3e8ff/8b5cf6?text=Producto+Spa'">
-                    </div>
-                    <h4 class="text-xl font-semibold text-[#7e22ce] mb-2">Crema Hidratante de Lavanda</h4>
-                    <p class="text-[#4b5563] text-sm flex-grow mb-4">Nutrición profunda con un aroma relajante para una piel suave y calmada.</p>
-                    <a href="#" class="mt-auto inline-block text-center bg-[#9333ea] hover:bg-[#7e22ce] text-[#ffffff] font-medium py-2 px-4 rounded-lg transition duration-300 text-sm">Ver Detalles</a>
-                </div>
+        <div class="splide" role="group" aria-label="Carrusel de productos de nuestra boutique">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    
+                    <li class="splide__slide p-4 h-96">
+                        <img src="img/exf1.gif" alt="Producto de la boutique 1" class="rounded-lg object-cover w-full h-full">
+                    </li>
+                    <li class="splide__slide p-4 h-96">
+                        <img src="img/exf1.gif" alt="Producto de la boutique 2" class="rounded-lg object-cover w-full h-full">
+                    </li>
+                    <li class="splide__slide p-4 h-96">
+                        <img src="img/exf2.webp" alt="Producto de la boutique 3" class="rounded-lg object-cover w-full h-full">
+                    </li>
+                    <li class="splide__slide p-4 h-96">
+                        <img src="https://placehold.co/400x500/c4b5fd/4c1d95?text=Producto+4" alt="Producto de la boutique 4" class="rounded-lg object-cover w-full h-full">
+                    </li>
+                    <li class="splide__slide p-4 h-96">
+                        <img src="https://placehold.co/400x500/f5d0fe/c026d3?text=Producto+5" alt="Producto de la boutique 5" class="rounded-lg object-cover w-full h-full">
+                    </li>
+                    <li class="splide__slide p-4 h-96">
+                        <img src="https://placehold.co/400x500/fbcfe8/db2777?text=Producto+6" alt="Producto de la boutique 6" class="rounded-lg object-cover w-full h-full">
+                    </li>
 
-                <div class="product-card bg-[#f9fafb] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden flex flex-col group">
-                    <div class="relative rounded-md overflow-hidden mb-4">
-                        <img src="https://placehold.co/400x250/e9d5ff/7e22ce?text=Exfoliante+Corporal+Sales" alt="[Imagen de Exfoliante Corporal de Sales]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/e9d5ff/7e22ce?text=Producto+Spa'">
-                    </div>
-                    <h4 class="text-xl font-semibold text-[#7e22ce] mb-2">Exfoliante Sales del Himalaya</h4>
-                    <p class="text-[#4b5563] text-sm flex-grow mb-4">Renueva tu piel eliminando impurezas y dejándola increíblemente tersa.</p>
-                    <a href="#" class="mt-auto inline-block text-center bg-[#9333ea] hover:bg-[#7e22ce] text-[#ffffff] font-medium py-2 px-4 rounded-lg transition duration-300 text-sm">Ver Detalles</a>
-                </div>
-
-                <div class="product-card bg-[#f9fafb] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden flex flex-col group">
-                    <div class="relative rounded-md overflow-hidden mb-4">
-                        <img src="https://placehold.co/400x250/ddd6fe/5b21b6?text=Aceite+Esencial+Relax" alt="[Imagen de Aceite Esencial Relajante]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/ddd6fe/5b21b6?text=Producto+Spa'">
-                    </div>
-                    <h4 class="text-xl font-semibold text-[#7e22ce] mb-2">Aceite Esencial Relax</h4>
-                    <p class="text-[#4b5563] text-sm flex-grow mb-4">Mezcla de aceites puros para aromaterapia, ideal para calmar la mente y el cuerpo.</p>
-                    <a href="#" class="mt-auto inline-block text-center bg-[#9333ea] hover:bg-[#7e22ce] text-[#ffffff] font-medium py-2 px-4 rounded-lg transition duration-300 text-sm">Ver Detalles</a>
-                </div>
-
-                 <div class="product-card bg-[#f9fafb] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden flex flex-col group">
-                    <div class="relative rounded-md overflow-hidden mb-4">
-                        <img src="https://placehold.co/400x250/c4b5fd/4c1d95?text=Vela+Arom%C3%A1tica+Zen" alt="[Imagen de Vela Aromática Zen]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/c4b5fd/4c1d95?text=Producto+Spa'">
-                    </div>
-                    <h4 class="text-xl font-semibold text-[#7e22ce] mb-2">Vela Aromática Zen</h4>
-                    <p class="text-[#4b5563] text-sm flex-grow mb-4">Crea un ambiente de paz y serenidad en tu hogar con nuestra vela de cera natural.</p>
-                    <a href="#" class="mt-auto inline-block text-center bg-[#9333ea] hover:bg-[#7e22ce] text-[#ffffff] font-medium py-2 px-4 rounded-lg transition duration-300 text-sm">Ver Detalles</a>
-                </div>
-
-            </div> </div>
-    </section>
-    <section id="contacto" class="py-16 md:py-24 bg-[#f5f3ff]"> <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold text-[#6b21a8] mb-8">Reserva Tu Experiencia OEVA</h3>
-            <p class="text-[#4b5563] mb-8 max-w-xl mx-auto">¿Listo para regalarte un momento de pura relajación? Contáctanos o reserva tu ritual en línea.</p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-                <div class="text-lg">
-                    <strong class="text-[#7e22ce]">Teléfono:</strong> <a href="tel:+523312345678" class="text-[#374151] hover:text-[#9333ea] transition duration-300">+52 (33) 1234 5678</a>
-                </div>
-                <div class="text-lg">
-                    <strong class="text-[#7e22ce]">Email:</strong> <a href="mailto:reservas@oevaspa.com" class="text-[#374151] hover:text-[#9333ea] transition duration-300">reservas@oevaspa.com</a>
-                </div>
+                </ul>
             </div>
-             <div id="reservar" class="mt-12">
-                 <a href="#" class="bg-[#fbbf24] hover:bg-[#f59e0b] text-[#6b21a8] font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">Reservar Mi Ritual</a>
-             </div>
         </div>
+    </div>
     </section>
 
+        
+    <section id="contacto" class="py-16 md:py-24 bg-[#f5f3ff]">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+
+    <div class="md:w-1/2 text-center md:text-left">
+      <h3 class="text-3xl font-bold text-[#6b21a8] mb-4">Reserva Tu Experiencia OEVA</h3>
+      <p class="text-[#4b5563] mb-8 leading-relaxed">
+        ¿Listo para regalarte un momento de pura relajación? Contáctanos o reserva tu ritual en línea.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10">
+        <div class="text-lg">
+          <strong class="text-[#7e22ce]">Teléfono:</strong> 
+          <a href="tel:+523312345678" class="text-[#374151] hover:text-[#9333ea] transition duration-300">+52 (33) 1234 5678</a>
+        </div>
+        <div class="text-lg">
+          <strong class="text-[#7e22ce]">Email:</strong> 
+          <a href="mailto:reservas@oevaspa.com" class="text-[#374151] hover:text-[#9333ea] transition duration-300">reservas@oevaspa.com</a>
+        </div>
+      </div>
+
+      <div id="reservar">
+        <a href="#" class="bg-white hover:bg-gray-200 text-[#6b21a8] font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">Reservar Mi Ritual</a>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2">
+      <div class="relative overflow-hidden w-full rounded-lg shadow-lg" style="padding-top: 75%;">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.8247943060783!2d-103.3750197!3d20.7173381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af006bc50eef%3A0x98f544bae0273ae5!2sOEVA%20SPA!5e0!3m2!1ses-419!2smx!4v1754881684333!5m2!1ses-419!2smx"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
     <footer class="bg-[#ffa8c2] text-white py-8">
     <div class="container mx-auto px-6 text-center">
         <p>&copy; 2025 OEVA Spa. Todos los derechos reservados.</p>
@@ -213,7 +231,13 @@
     </div>
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
     <script src="script.js"></script>
+
+    
 
 </body>
 </html>

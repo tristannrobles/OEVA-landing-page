@@ -23,24 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const animation = lottie.loadAnimation({
             container: logoContainer,
             renderer: 'svg',
-            // --- CAMBIOS PARA PING-PONG ---
-            loop: false, // Desactivamos el bucle estándar
-            autoplay: true, // La primera reproducción inicia automáticamente
-            // --- FIN CAMBIOS ---
-            path: 'lottie/oeva_prueba.json' // Ruta a tu archivo JSON
+            loop: false, 
+            autoplay: true,
+            path: 'lottie/oeva_prueba.json'
         });
 
-        // --- AÑADIDO PARA PING-PONG ---
-        // Event listener que se activa cuando la animación completa un ciclo
+        // Event listener que se activa cuando la animación completa un ciclo (efecto ping-pong)
         animation.addEventListener('complete', function() {
-            // Invierte la dirección de reproducción
-            // Si estaba yendo hacia adelante (1), irá hacia atrás (-1) y viceversa
             animation.setDirection(animation.playDirection * -1);
-            // Vuelve a reproducir la animación en la nueva dirección
             animation.play();
         });
-        // --- FIN AÑADIDO ---
-
 
         // Manejo de errores opcional
         animation.addEventListener('data_failed', function() {
@@ -56,11 +48,41 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Lottie animation error:', error);
         });
 
-
     } else {
         console.error('Logo container element (#lottie-logo) not found.');
     }
 
-    // Puedes añadir más código JavaScript para otras funcionalidades aquí
+    // --- INICIA CÓDIGO DEL CARRUSEL BOUTIQUE ---
+    const splideContainer = document.querySelector('.splide');
+    
+    // Verificamos que el contenedor del carrusel exista en la página actual
+    if (splideContainer) {
+        new Splide(splideContainer, {
+            type      : 'loop',
+            drag      : 'free',
+            focus     : 'center',
+            gap       : '1rem', // Espacio entre las imágenes
+            perPage   : 4,      // Slides a mostrar en escritorio
+            autoScroll: {
+              speed: 3,           // Velocidad del desplazamiento
+              pauseOnHover: true, // Pausa al pasar el mouse
+              pauseOnFocus: true, // Pausa al seleccionar
+            },
+            arrows: false, // Ocultamos las flechas de navegación
+            pagination: false, // Ocultamos los puntos de paginación
+            breakpoints: {
+                1024: { // Para tabletas
+                    perPage: 3,
+                },
+                768: { // Para móviles grandes
+                    perPage: 2,
+                },
+                640: { // Para móviles pequeños
+                    perPage: 1,
+                },
+            },
+        }).mount(window.splide.Extensions);
+    }
+    // --- FIN CÓDIGO DEL CARRUSEL BOUTIQUE ---
 
 }); // Fin del addEventListener
