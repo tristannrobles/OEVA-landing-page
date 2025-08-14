@@ -1,88 +1,89 @@
 // Espera a que el DOM esté completamente cargado antes de ejecutar el script
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Verifica si la librería lottie está disponible
-    if (typeof lottie === 'undefined') {
-        console.error('Lottie library not loaded.');
+    // --- CÓDIGO ANIMACIÓN LOTTIE ---
+    if (typeof lottie !== 'undefined') {
         const logoContainer = document.getElementById('lottie-logo');
         if (logoContainer) {
-            logoContainer.textContent = 'OEVA Spa'; // Texto alternativo
-            logoContainer.style.color = 'white';
-            logoContainer.style.fontSize = '1.5rem';
-            logoContainer.style.fontWeight = 'bold';
+            const animation = lottie.loadAnimation({
+                container: logoContainer,
+                renderer: 'svg',
+                loop: false, 
+                autoplay: true,
+                path: 'lottie/oeva_prueba.json'
+            });
+            animation.addEventListener('complete', function() {
+                animation.setDirection(animation.playDirection * -1);
+                animation.play();
+            });
         }
-        return;
     }
 
-    // Elemento contenedor para la animación Lottie
-    const logoContainer = document.getElementById('lottie-logo');
-
-    // Asegúrate de que el contenedor exista
-    if (logoContainer) {
-        // Configura y carga la animación Lottie
-        const animation = lottie.loadAnimation({
-            container: logoContainer,
-            renderer: 'svg',
-            loop: false, 
-            autoplay: true,
-            path: 'lottie/oeva_prueba.json'
-        });
-
-        // Event listener que se activa cuando la animación completa un ciclo (efecto ping-pong)
-        animation.addEventListener('complete', function() {
-            animation.setDirection(animation.playDirection * -1);
-            animation.play();
-        });
-
-        // Manejo de errores opcional
-        animation.addEventListener('data_failed', function() {
-            console.error('Failed to load Lottie animation data from path: lottie/oeva_prueba.json');
-             if (logoContainer) {
-                logoContainer.textContent = 'OEVA Spa';
-                logoContainer.style.color = 'white';
-                logoContainer.style.fontSize = '1.5rem';
-                logoContainer.style.fontWeight = 'bold';
-            }
-        });
-         animation.addEventListener('error', function(error) {
-            console.error('Lottie animation error:', error);
-        });
-
-    } else {
-        console.error('Logo container element (#lottie-logo) not found.');
-    }
-
-    // --- INICIA CÓDIGO DEL CARRUSEL BOUTIQUE ---
-    const splideContainer = document.querySelector('.splide');
-    
-    // Verificamos que el contenedor del carrusel exista en la página actual
-    if (splideContainer) {
-        new Splide(splideContainer, {
+    // --- CÓDIGO CARRUSEL BOUTIQUE ---
+    const boutiqueCarousel = document.querySelector('#boutique-carousel');
+    if (boutiqueCarousel) {
+        new Splide(boutiqueCarousel, {
             type      : 'loop',
             drag      : 'free',
             focus     : 'center',
-            gap       : '1rem', // Espacio entre las imágenes
-            perPage   : 4,      // Slides a mostrar en escritorio
+            gap       : '1rem',
+            perPage   : 4,
             autoScroll: {
-              speed: 3,           // Velocidad del desplazamiento
-              pauseOnHover: true, // Pausa al pasar el mouse
-              pauseOnFocus: true, // Pausa al seleccionar
+              speed: 1.5,
+              pauseOnHover: true,
+              pauseOnFocus: true,
             },
-            arrows: false, // Ocultamos las flechas de navegación
-            pagination: false, // Ocultamos los puntos de paginación
+            arrows: false,
+            pagination: false,
             breakpoints: {
-                1024: { // Para tabletas
-                    perPage: 3,
-                },
-                768: { // Para móviles grandes
-                    perPage: 2,
-                },
-                640: { // Para móviles pequeños
-                    perPage: 1,
-                },
+                1024: { perPage: 3 },
+                768: { perPage: 2 },
+                640: { perPage: 1 },
             },
         }).mount(window.splide.Extensions);
     }
-    // --- FIN CÓDIGO DEL CARRUSEL BOUTIQUE ---
+    
+    // --- CÓDIGO CARRUSEL PROMOCIONES ---
+    const promoCarousel = document.querySelector('#promo-carousel');
+    if (promoCarousel) {
+        new Splide(promoCarousel, {
+            type       : 'fade',
+            rewind     : true,
+            perPage    : 1,
+            pagination : true,
+            arrows     : true,
+        }).mount();
+    }
 
+    // --- CÓDIGO MENÚ HAMBURGUESA (NUEVO) ---
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    if (hamburgerButton && mobileMenu) {
+        // Muestra u oculta el menú al hacer clic en el botón
+        hamburgerButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cierra el menú y se desplaza suavemente al hacer clic en un enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Previene el salto brusco
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                mobileMenu.classList.add('hidden'); // Oculta el menú después de hacer clic
+            });
+        });
+    }
+    
 }); // Fin del addEventListener

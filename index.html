@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     
     <style>
-        /* Ensure the video covers the entire hero section */
         #hero-video {
             position: absolute;
             top: 50%;
@@ -26,47 +25,52 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -10; /* Behind content and overlay */
+            z-index: -10;
             transform: translateX(-50%) translateY(-50%);
             background-size: cover;
             transition: 1s opacity;
-            object-fit: cover; /* Ensure video covers without distortion */
+            object-fit: cover;
         }
-        /* Relative container for the absolute video */
         .hero-section-container {
             position: relative;
-            overflow: hidden; /* Prevent overflows */
-            height: 60vh; /* Maintain original height */
-        }
-        /* Adjustment for card hover effect within the link */
-        .service-link .service-card {
-             display: block; /* Ensure the card fills the link's space */
-        }
-         /* Hover effect for product cards (similar to service cards) */
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            height: 60vh;
         }
     </style>
     
 </head>
 
-
 <body class="bg-[#fff1f2] text-[#1f2937]">
 
-  <header class="bg-[#ffa8c2] text-[#ffffff] shadow-md">
-    <nav class="container mx-auto px-6 py-4 md:py-10 flex flex-col md:flex-row md:justify-end items-center relative">
-        
-        <div id="lottie-logo" class="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"></div>
-        
-        <div class="mt-4 md:mt-0">
-           <a href="#reservar" class="bg-[#6b21a8] hover:bg-[#581c87] text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300">Agenda tu cita</a>
+    <header class="bg-[#ffa8c2] text-white shadow-md relative z-50">
+    <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center md:justify-center">
+            
+            <a href="index.html">
+                <div id="lottie-logo"></div>
+            </a>
 
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#ffa8c2] shadow-lg rounded-b-lg">
+            <a href="#servicios" class="mobile-menu-link block text-center py-3 px-4 text-lg hover:bg-[#ef96e5] transition duration-300">Servicios</a>
+            <a href="#promociones" class="mobile-menu-link block text-center py-3 px-4 text-lg hover:bg-[#ef96e5] transition duration-300">Promociones</a>
+            <a href="#nosotros" class="mobile-menu-link block text-center py-3 px-4 text-lg hover:bg-[#ef96e5] transition duration-300">Nosotros</a>
+            <a href="#boutique" class="mobile-menu-link block text-center py-3 px-4 text-lg hover:bg-[#ef96e5] transition duration-300">Boutique</a>
+            <a href="#contacto" class="mobile-menu-link block text-center py-3 px-4 text-lg hover:bg-[#ef96e5] transition duration-300">Contacto</a>
         </div>
     </nav>
 </header>
 
-    <section class="hero-section-container text-[#ffffff] flex items-center justify-center">
+    <main>
+        <section class="hero-section-container text-white flex items-center justify-center">
         <video autoplay loop muted playsinline id="hero-video">
             <source src="assets/spa_video_fondo.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5. </video>
@@ -74,170 +78,189 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#ffa8c2] via-[#581c87]/70 to-transparent opacity-75 rounded-b-lg z-[-5]"></div>
 
         <div class="relative z-10 text-center px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-lg">Despierta tus Sentidos, Renueva tu Espíritu</h2>
-    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow">En OEVA Spa, cada detalle está pensado para transportarte a un estado de profunda calma y bienestar.</p>
-    
-<a href="#servicios" class="bg-[#fff1f2] hover:bg-gray-200 text-[#6b21a8] font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">Conoce nuestros servicios</a>
-        </div>  
-    </section>
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">Libertad en tu Piel</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow">
+                Depilación láser y cuidado facial con tecnología de vanguardia. Resultados visibles, cuidado experto.
+            </p>
+            
+            <a href="https://wa.me/5213312216578?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." 
+               target="_blank" 
+               class="bg-[#6b21a8] hover:bg-[#581c87] text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">
+               Agenda por WhatsApp
+            </a>
+        </div>
+        </section>
 
-    <section id="servicios" class="py-16 md:py-24 bg-[#fff1f2]">
-        <div class="container mx-auto px-6">
-            <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Servicios</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <a href="faciales.html" class="service-link group block rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a855f7] focus:ring-offset-2">
-                    <div class="service-card bg-[#ef96e5] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden h-full flex flex-col">
-                        <div class="relative rounded-md overflow-hidden mb-4">
-                            <img src="img/faciales.webp" alt="[Imagen de Faciales Personalizados]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/c4b5fd/4c1d95?text=Imagen+no+disponible'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#581c87]/60 via-[#6b21a8]/30 to-transparent group-hover:opacity-80 transition-opacity duration-300"></div>
+        <section id="servicios" class="py-16 md:py-24 bg-[#fff1f2]">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Servicios</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="depilacion.html" class="group block rounded-lg shadow-lg overflow-hidden h-96 p-3 bg-[#a191db] transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative w-full h-full rounded-md overflow-hidden">
+                            <img src="img/depilacion.webp" alt="Aplicación de láser para depilación" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" onerror="this.src='https://placehold.co/400x500/a191db/ffffff?text=Depilación'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <h4 class="text-2xl font-bold text-white">Depilación Láser Avanzada</h4>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-semibold text-[#ffffff] mb-2">Faciales Personalizados</h4>
-                        <p class="text-[#ffffff] flex-grow">Tratamientos adaptados a tu tipo de piel para una tez radiante y saludable.</p>
-                    </div>
-                </a>
-
-                <a href="masajes.html" class="service-link group block rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a855f7] focus:ring-offset-2">
-                    <div class="service-card bg-[#56b3d6] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden h-full flex flex-col">
-                        <div class="relative rounded-md overflow-hidden mb-4">
-                            <img src="img/masajes.webp" alt="[Imagen de Masajes Terapéuticos]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/ddd6fe/5b21b6?text=Imagen+no+disponible'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#581c87]/60 via-[#6b21a8]/30 to-transparent group-hover:opacity-80 transition-opacity duration-300"></div>
+                    </a>
+                    <a href="faciales.html" class="group block rounded-lg shadow-lg overflow-hidden relative h-96 p-3 bg-[#ef96e5] transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative w-full h-full rounded-md overflow-hidden">
+                            <img src="img/faciales.webp" alt="Mujer recibiendo un tratamiento facial" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" onerror="this.src='https://placehold.co/400x500/ef96e5/ffffff?text=Faciales'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <h4 class="text-2xl font-bold text-white">Faciales Personalizados</h4>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-semibold text-[#ffffff] mb-2">Masajes Terapéuticos</h4>
-                        <p class="text-[#ffffff] flex-grow">Relaja tus músculos, alivia el estrés y renueva tu energía con nuestras diversas técnicas.</p>
-                    </div>
-                </a>
-
-                <a href="depilacion.html" class="service-link group block rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a855f7] focus:ring-offset-2">
-                    <div class="service-card bg-[#a191db] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden h-full flex flex-col">
-                        <div class="relative rounded-md overflow-hidden mb-4">
-                            <img src="img/depilacion.webp" alt="[Imagen de Depilación Láser Avanzada]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/a5b4fc/3730a3?text=Imagen+no+disponible'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#581c87]/60 via-[#6b21a8]/30 to-transparent group-hover:opacity-80 transition-opacity duration-300"></div>
+                    </a>
+                    <a href="masajes.html" class="group block rounded-lg shadow-lg overflow-hidden relative h-96 p-3 bg-[#56b3d6] transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative w-full h-full rounded-md overflow-hidden">
+                            <img src="img/masajes.webp" alt="Espalda de una persona recibiendo un masaje" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" onerror="this.src='https://placehold.co/400x500/56b3d6/ffffff?text=Masajes'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <h4 class="text-2xl font-bold text-white">Masajes Terapéuticos</h4>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-semibold text-[#ffffff] mb-2">Depilación Láser Avanzada</h4>
-                        <p class="text-[#ffffff] flex-grow">Resultados duraderos y seguros para una piel suave y libre de vello.</p>
-                    </div>
-                </a>
-
-                <a href="tatuajes.html" class="service-link group block rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a855f7] focus:ring-offset-2">
-                    <div class="service-card bg-[#000000] rounded-lg shadow-md p-6 transition duration-300 ease-in-out overflow-hidden h-full flex flex-col">
-                        <div class="relative rounded-md overflow-hidden mb-4">
-                            <img src="img/tatuajes.webp" alt="[Imagen de Eliminación de Tatuajes]" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/400x250/e9d5ff/7e22ce?text=Imagen+no+disponible'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#581c87]/60 via-[#6b21a8]/30 to-transparent group-hover:opacity-80 transition-opacity duration-300"></div>
+                    </a>
+                    <a href="tatuajes.html" class="group block rounded-lg shadow-lg overflow-hidden relative h-96 p-3 bg-[#000000] transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative w-full h-full rounded-md overflow-hidden">
+                            <img src="img/tatuajes.webp" alt="Láser para eliminación de tatuajes" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" onerror="this.src='https://placehold.co/400x500/000000/ffffff?text=Tatuajes'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <h4 class="text-2xl font-bold text-white">Eliminación de Tatuajes</h4>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-semibold text-[#ffffff] mb-2">Eliminación de Tatuajes</h4>
-                        <p class="text-[#ffffff] flex-grow">Tecnología láser de última generación para borrar tatuajes no deseados de forma eficaz.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="promociones" class="py-16 md:py-24 bg-[#fff1f2]">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Promociones del Mes</h3>
+                <div class="max-w-5xl mx-auto">
+                    <div id="promo-carousel" class="splide" aria-label="Promociones del Mes">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="rounded-lg overflow-hidden">
+                                        <img src="https://placehold.co/1920x1080/a191db/ffffff?text=Promo+Láser" alt="Promoción en Depilación Láser" class="w-full h-full object-cover">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="rounded-lg overflow-hidden">
+                                        <img src="https://placehold.co/1920x1080/ef96e5/ffffff?text=Promo+Facial" alt="Promoción en Faciales" class="w-full h-full object-cover">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                     <div class="rounded-lg overflow-hidden">
+                                        <img src="https://placehold.co/1920x1080/56b3d6/ffffff?text=Promo+Amigas" alt="Promoción 2x1" class="w-full h-full object-cover">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </a>
-
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="nosotros" class="py-16 md:py-24 bg-[#fff1f2]"> <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                 <img src="img/prueba.png" alt="[Imagen del Ambiente Sereno de OEVA Spa]" class="rounded-lg shadow-lg w-full" onerror="this.src='https://placehold.co/500x350/c4b5fd/4c1d95?text=Imagen+no+disponible'">
+        <section id="nosotros" class="py-16 md:py-24 bg-[#fff1f2]"> 
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                     <img src="img/prueba.jpg.jpg" alt="[Imagen del Ambiente Sereno de OEVA Spa]" class="rounded-lg shadow-lg w-full" onerror="this.src='https://placehold.co/500x350/c4b5fd/4c1d95?text=Imagen+no+disponible'">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-[#6b21a8] mb-6">Tu Santuario de Paz y Bienestar</h3>
+                    <p class="text-[#374151] mb-4 leading-relaxed">En OEVA Spa, hemos creado un refugio donde el tiempo se detiene. Cada rincón está diseñado para invitar a la calma y la introspección. Nuestro equipo experto te guiará en un viaje sensorial único, utilizando productos puros y terapias personalizadas para nutrir tu cuerpo, mente y alma.</p>
+                    <p class="text-[#374151] leading-relaxed">Permítenos cuidarte y ayudarte a reconectar con tu esencia en un ambiente de serenidad absoluta.</p>
+                </div>
             </div>
-            <div class="md:w-1/2">
-                <h3 class="text-3xl font-bold text-[#6b21a8] mb-6">Tu Santuario de Paz y Bienestar</h3>
-                <p class="text-[#374151] mb-4 leading-relaxed">En OEVA Spa, hemos creado un refugio donde el tiempo se detiene. Cada rincón está diseñado para invitar a la calma y la introspección. Nuestro equipo experto te guiará en un viaje sensorial único, utilizando productos puros y terapias personalizadas para nutrir tu cuerpo, mente y alma.</p>
-                <p class="text-[#374151] leading-relaxed">Permítenos cuidarte y ayudarte a reconectar con tu esencia en un ambiente de serenidad absoluta.</p>
+        </section>
+
+        <section id="boutique" class="py-16 md:py-24 bg-[#fff1f2] overflow-hidden">
+            <div class="container mx-auto">
+                <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Boutique</h3>
+                <div id="boutique-carousel" class="splide" role="group" aria-label="Carrusel de productos de nuestra boutique">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 1" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 2" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 3" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 4" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 5" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                            <li class="splide__slide p-4 h-96">
+                                <img src="img/exf1.png" alt="Producto de la boutique 6" class="rounded-lg object-cover w-full h-full">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="boutique" class="py-16 md:py-24 bg-[#fff1f2] overflow-hidden">
-    <div class="container mx-auto">
-        <h3 class="text-3xl font-bold text-center text-[#6b21a8] mb-12">Boutique</h3>
-
-        <div class="splide" role="group" aria-label="Carrusel de productos de nuestra boutique">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 1" class="rounded-lg object-cover w-full h-full">
-                    </li>
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 2" class="rounded-lg object-cover w-full h-full">
-                    </li>
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 3" class="rounded-lg object-cover w-full h-full">
-                    </li>
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 4" class="rounded-lg object-cover w-full h-full">
-                    </li>
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 5" class="rounded-lg object-cover w-full h-full">
-                    </li>
-                    <li class="splide__slide p-4 h-96">
-                        <img src="img/exf1.png" alt="Producto de la boutique 6" class="rounded-lg object-cover w-full h-full">
-                    </li>
-
-                </ul>
+        <section id="contacto" class="py-16 md:py-24 bg-[#fff1f2]">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-3xl font-bold text-[#6b21a8] mb-4">Reserva Tu Experiencia OEVA</h3>
+                    <p class="text-[#4b5563] mb-8 leading-relaxed">
+                      ¿Listo para regalarte un momento de pura relajación? Contáctanos o reserva tu ritual en línea.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10">
+                      <div class="text-lg">
+                        <strong class="text-[#7e22ce]">Teléfono:</strong> 
+                        <a href="tel:+523312216578" class="text-[#374151] hover:text-[#9333ea] transition duration-300">+52 (33) 1221 6578</a>
+                      </div>
+                      <div class="text-lg">
+                        <strong class="text-[#7e22ce]">Email:</strong> 
+                        <a href="mailto:reservas@oevaspa.com" class="text-[#374151] hover:text-[#9333ea] transition duration-300">reservas@oevaspa.com</a>
+                      </div>
+                    </div>
+                    <div id="reservar">
+                      <a href="https://wa.me/5213312216578?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." 
+                         target="_blank" 
+                         class="bg-[#6b21a8] hover:bg-[#581c87] text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">
+                         Agenda por WhatsApp
+                      </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="relative overflow-hidden w-full rounded-lg shadow-lg" style="padding-top: 75%;">
+                      <iframe
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.8247943060783!2d-103.3750197!3d20.7173381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af006bc50eef%3A0x98f544bae0273ae5!2sOEVA%20SPA!5e0!3m2!1ses-419!2smx!4v1754881684333!5m2!1ses-419!2smx"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    </section>
+        </section>
+    </main>
 
-        
-    <section id="contacto" class="py-16 md:py-24 bg-[#fff1f2]">
-  <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
-
-    <div class="md:w-1/2 text-center md:text-left">
-      <h3 class="text-3xl font-bold text-[#6b21a8] mb-4">Reserva Tu Experiencia OEVA</h3>
-      <p class="text-[#4b5563] mb-8 leading-relaxed">
-        ¿Listo para regalarte un momento de pura relajación? Contáctanos o reserva tu ritual en línea.
-      </p>
-
-      <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10">
-        <div class="text-lg">
-          <strong class="text-[#7e22ce]">Teléfono:</strong> 
-          <a href="tel:+523312345678" class="text-[#374151] hover:text-[#9333ea] transition duration-300">+52 (33) 1221 6578</a>
-        </div>
-        <div class="text-lg">
-          <strong class="text-[#7e22ce]">Email:</strong> 
-          <a href="mailto:reservas@oevaspa.com" class="text-[#374151] hover:text-[#9333ea] transition duration-300">reservas@oevaspa.com</a>
-        </div>
-      </div>
-
-      <div id="reservar">
-        <a href="#" class="bg-white hover:bg-gray-200 text-[#6b21a8] font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 text-lg">Reservar Mi Ritual</a>
-      </div>
-    </div>
-
-    <div class="w-full md:w-1/2">
-      <div class="relative overflow-hidden w-full rounded-lg shadow-lg" style="padding-top: 75%;">
-        <iframe
-          class="absolute top-0 left-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.8247943060783!2d-103.3750197!3d20.7173381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af006bc50eef%3A0x98f544bae0273ae5!2sOEVA%20SPA!5e0!3m2!1ses-419!2smx!4v1754881684333!5m2!1ses-419!2smx"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-
-  </div>
-</section>
     <footer class="bg-[#ffa8c2] text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-        <p>&copy; 2025 OEVA Spa. Todos los derechos reservados.</p>
-        <p class="mt-2 text-sm">Av. San Jorge 510, Guadalajara, Jalisco, México</p>
-        <div class="mt-4">
-            <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Facebook</a> |
-            <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Instagram</a>
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 OEVA Spa. Todos los derechos reservados.</p>
+            <p class="mt-2 text-sm">Av. San Jorge 510, Guadalajara, Jalisco, México</p>
+            <div class="mt-4">
+                <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Facebook</a> |
+                <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Instagram</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-
     <script src="script.js"></script>
-
-    
-
 </body>
 </html>
