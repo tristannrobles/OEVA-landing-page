@@ -165,17 +165,39 @@
         </section>
 
         <section id="nosotros" class="py-16 md:py-24 bg-[#fff1f2]"> 
-            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                     <img src="img/prueba.jpg.jpg" alt="[Imagen del Ambiente Sereno de OEVA Spa]" class="rounded-lg shadow-lg w-full" onerror="this.src='https://placehold.co/500x350/c4b5fd/4c1d95?text=Imagen+no+disponible'">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-3xl font-bold text-[#6b21a8] mb-6">Tu Santuario de Paz y Bienestar</h3>
-                    <p class="text-[#374151] mb-4 leading-relaxed">En OEVA Spa, hemos creado un refugio donde el tiempo se detiene. Cada rincón está diseñado para invitar a la calma y la introspección. Nuestro equipo experto te guiará en un viaje sensorial único, utilizando productos puros y terapias personalizadas para nutrir tu cuerpo, mente y alma.</p>
-                    <p class="text-[#374151] leading-relaxed">Permítenos cuidarte y ayudarte a reconectar con tu esencia en un ambiente de serenidad absoluta.</p>
+    <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 items-center">
+        
+        <div class="md:w-1/2">
+            <div id="nosotros-carousel" class="splide rounded-lg shadow-lg overflow-hidden" aria-label="Imágenes de nuestras instalaciones">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="img/prueba.jpg.jpg" alt="Ambiente sereno del spa" class="w-full h-full object-cover">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/prueba.jpg.jpg" alt="Detalle de decoración del spa" class="w-full h-full object-cover">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/prueba.jpg.jpg" alt="Sala de espera del spa" class="w-full h-full object-cover">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/prueba.jpg.jpg" alt="Productos utilizados en el spa" class="w-full h-full object-cover">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/prueba.jpg.jpg" alt="Entrada del spa" class="w-full h-full object-cover">
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <h3 class="text-3xl font-bold text-[#6b21a8] mb-6">Tu Santuario de Paz y Bienestar</h3>
+            <p class="text-[#374151] mb-4 leading-relaxed">En OEVA Spa, hemos creado un refugio donde el tiempo se detiene. Cada rincón está diseñado para invitar a la calma y la introspección. Nuestro equipo experto te guiará en un viaje sensorial único, utilizando productos puros y terapias personalizadas para nutrir tu cuerpo, mente y alma.</p>
+            <p class="text-[#374151] leading-relaxed">Permítenos cuidarte y ayudarte a reconectar con tu esencia en un ambiente de serenidad absoluta.</p>
+        </div>
+    </div>
+</section>
 
         <section id="boutique" class="py-16 md:py-24 bg-[#fff1f2] overflow-hidden">
             <div class="container mx-auto">
@@ -249,18 +271,28 @@
     </main>
 
     <footer class="bg-[#ffa8c2] text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>© 2025 OEVA Spa. Todos los derechos reservados.</p>
-            <p class="mt-2 text-sm">Av. San Jorge 510, Guadalajara, Jalisco, México</p>
-            <div class="mt-4">
-                <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Facebook</a> |
-                <a href="#" class="hover:text-[#fcd34d] mx-2 transition duration-300">Instagram</a>
-            </div>
+    <div class="container mx-auto px-6 text-center">
+        <p>© 2025 OEVA Spa. Todos los derechos reservados.</p>
+        <p class="mt-2 text-sm">Av. San Jorge 510, Guadalajara, Jalisco, México</p>
+        
+        <div class="mt-4">
+            <a href="https://www.facebook.com/p/OEVA-Spa-61565854267742/" target="_blank" rel="noopener noreferrer" class="hover:text-[#fcd34d] mx-2 transition duration-300">Facebook</a> |
+            <a href="https://www.instagram.com/spa_oeva/" target="_blank" rel="noopener noreferrer" class="hover:text-[#fcd34d] mx-2 transition duration-300">Instagram</a>
         </div>
-    </footer>
+        </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script src="script.js"></script>
+
+
+    <button id="scroll-to-top-btn" class="hidden fixed bottom-6 right-6 bg-[#6b21a8] hover:bg-[#581c87] text-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+        </svg>
+    </button>
+
+    
 </body>
 </html>
