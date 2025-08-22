@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faciales Personalizados - OEVA Spa</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+
+<body class="bg-[#fff1f2] text-[#1f2937]">
+
+    <header class="bg-[#ef96e5] text-white shadow-md relative z-50">
+    <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center md:justify-center">
+            <a href="index.html">
+                <div id="lottie-logo"></div>
+            </a>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#ef96e5] shadow-lg rounded-b-lg">
+            <a href="index.html" class="block text-center py-3 px-4 text-lg hover:bg-[#dd74cb] transition duration-300">Inicio</a>
+            <a href="depilacion.html" class="block text-center py-3 px-4 text-lg hover:bg-[#dd74cb] transition duration-300">Depilación</a>
+            <a href="faciales.html" class="block text-center py-3 px-4 text-lg hover:bg-[#dd74cb] transition duration-300">Faciales</a>
+            <a href="masajes.html" class="block text-center py-3 px-4 text-lg hover:bg-[#dd74cb] transition duration-300">Masajes</a>
+            <a href="tatuajes.html" class="block text-center py-3 px-4 text-lg hover:bg-[#dd74cb] transition duration-300">Tatuajes</a>
+        </div>
+        </nav>
+</header>
+
+    <main>
+        <section id="nuestros-faciales" class="container mx-auto px-6 py-12 md:py-20">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-[#6b21a8] mb-12">Nuestros Rituales Faciales</h1>
+            <div class="text-center text-gray-700">
+                <p>(Contenido sobre los tipos de faciales...)</p>
+            </div>
+        </section>
+
+        <section id="paquetes" class="bg-white py-12 md:py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-[#6b21a8] mb-12">Paquetes y Precios</h2>
+                <div class="text-center text-gray-700">
+                    <p>(Contenido sobre los paquetes disponibles...)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="container mx-auto px-6 py-12 md:py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#6b21a8] mb-12">Preguntas Frecuentes</h2>
+            <div class="max-w-3xl mx-auto space-y-6 text-gray-700">
+                <div>
+                    <h3 class="font-semibold text-lg">¿Pregunta de ejemplo número uno?</h3>
+                    <p>Respuesta de ejemplo para la pregunta frecuente.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">¿Pregunta de ejemplo número dos?</h3>
+                    <p>Respuesta de ejemplo para la pregunta frecuente.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#ef96e5] text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 OEVA Spa. Todos los derechos reservados.</p>
+            <p class="mt-2 text-sm">Av. San Jorge 510, Guadalajara, Jalisco, México</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/p/OEVA-Spa-61565854267742/" target="_blank" rel="noopener noreferrer" class="hover:text-white/70 mx-2 transition duration-300">Facebook</a> |
+                <a href="https://www.instagram.com/spa_oeva/" target="_blank" rel="noopener noreferrer" class="hover:text-white/70 mx-2 transition duration-300">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top-btn" class="hidden fixed bottom-6 right-6 bg-[#6b21a8] hover:bg-[#581c87] text-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+        </svg>
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
